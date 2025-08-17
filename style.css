@@ -1,0 +1,224 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f8fa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0f2347;
+}
+
+header img.logo {
+    /* Further increase logo height for greater prominence */
+    height: 120px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 24px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.75;
+}
+
+/* Active link styling for navigation */
+nav a.active {
+    border-bottom: 2px solid #ffdd57;
+    padding-bottom: 4px;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    /* Use a background image of horses at the finish line with a dark overlay */
+    background: linear-gradient(rgba(7, 33, 79, 0.6), rgba(14, 49, 106, 0.6)), url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.product-logo {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sections */
+section {
+    /* Reduce vertical spacing in sections for a denser layout */
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Summary section on the home page */
+.summary {
+    /* Reduce padding on the summary section for a more compact layout */
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section h2 {
+    margin-top: 0;
+    /* Reduce bottom margin on section headings to bring content closer together */
+    margin-bottom: 15px;
+    color: #0f2347;
+    font-size: 2em;
+}
+
+section p {
+    /* Reduce vertical spacing between paragraphs */
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0f2347;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+/* Figure and images */
+.figure {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Data table styling */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #cccccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #0f2347;
+    color: #ffffff;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f0f4f9;
+}
+
+section h3 {
+    /* Reduce top margin on subheadings for tighter spacing */
+    margin-top: 20px;
+    color: #0f2347;
+    font-size: 1.6em;
+}
+
+/* Download link button */
+.download-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #0f2347;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.download-link:hover {
+    opacity: 0.8;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    header {
+        /* Stack logo and navigation vertically on mobile */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    nav li {
+        margin-left: 0;
+        margin-bottom: 8px;
+    }
+    header img.logo {
+        /* Reduce logo height on mobile for a better fit */
+        height: 80px;
+    }
+    .hero {
+        padding: 80px 15px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .product-logo {
+        height: 70px;
+        margin-bottom: 15px;
+    }
+    section {
+        padding: 20px 15px;
+    }
+    .summary {
+        padding: 30px 15px;
+    }
+    section h2,
+    section h1 {
+        font-size: 1.5em;
+    }
+    .data-table {
+        font-size: 0.85em;
+        overflow-x: auto;
+        display: block;
+    }
+}
